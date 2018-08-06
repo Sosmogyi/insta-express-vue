@@ -12,7 +12,7 @@ const app = express()
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
-app.use(express.static(path.join(__dirname, '../../client/dist')))
+app.use(express.static(path.join(__dirname, '../client/dist')))
 
 require('./src/routes')(app)
 
